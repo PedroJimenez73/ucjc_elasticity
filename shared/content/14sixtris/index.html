@@ -1,0 +1,73 @@
+<div id="page-container">
+    <div class="container">
+        <h2>
+            <span>4.2</span>
+            Two types of sales taxes
+        </h2>
+        <p><b>Sales taxes can be divided in 2 types according to its way of accounting:</b></p>
+        <div class="tab">
+            <div class="tabs">
+                <div class="check" onclick="toggleTab(1)">
+                    <p><i>Ad valorem</i> tax</p>
+                </div>
+                <div onclick="toggleTab(2)">
+                    <p>Specific tax (or unit tax)</p>
+                </div>
+            </div>
+            <div class="content-tabs">
+                <div class="show visible" style="z-index: 10;">
+                    <p>For every dollar the consumer spends, the government keeps a fraction, α, which is the <i>ad valorem</i> tax rate.</p>
+                </div>
+                <div class="show">
+                    <p>Where a specified dollar amount, <i>t</i>, is collected per unit of output.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tab = document.querySelector('.tab');
+    var tabs = document.querySelectorAll('.tabs div');
+    var contents = document.querySelectorAll('.content-tabs .show');
+    var body = document.querySelector('body');
+
+    var maxHeightContent = 0;
+    var tabsHeigth = 0;
+
+    if(window.innerWidth > 440) {
+        for (i = 0; i < contents.length; i++) {
+            if(contents[i].offsetHeight > maxHeightContent) {
+                maxHeightContent = contents[i].offsetHeight;
+            }
+        }
+
+        tab.style.height = maxHeightContent + 40 + 'px';
+
+        for (j = 0; j < tabs.length; j++) {
+            tabs[j].style.height = (maxHeightContent + 40) / tabs.length + 'px';
+        }
+    } else {
+        for (i = 0; i < tabs.length; i++) {
+            maxHeightContent += tabs[i].offsetHeight;
+        }
+
+        tab.style.height = maxHeightContent + 'px';
+    }
+
+    function toggleTab(e) {
+        e--;
+        for (k = 0; k < tabs.length; k++) {
+            if (e !== k) {
+                tabs[k].classList.remove('check');
+                contents[k].classList.remove('visible');
+            } else {
+                tabs[k].classList.add('check');
+                contents[k].classList.add('visible');
+            }
+        }
+    }
+
+
+</script>
+
+

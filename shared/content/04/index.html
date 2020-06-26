@@ -1,0 +1,102 @@
+<div id="page-container">
+    <div class="container">
+    <h1>Applying the Supply and-Demand Model</h1>
+    <h3>Let’s get started</h3>
+    <p>The increase in the price of a product affects in different ways its decrease in sales depending on how necessary the product is.</p>
+    <p>For example, if the price of a car doubles without providing new features, its sales will drop drastically, while if the good is a necessity, even if its price rises, sales will not be affected.</p>
+    <p>Hence we speak of elastic and inelastic goods, but, how does the market react to a good being elastic or inelastic?</p>
+    <p class="instructions">Click over images to expand info.</p>
+    <div id="flexy-not-ie" class="flexy">
+        <div class="flip-card" onclick="flip(1)">
+            <div class="front-card">
+                <img src="img/Elast_1.jpg">
+                <p class="orange-text">
+                    Elastic goods
+                </p>
+            </div>
+            <div class="back-card">
+                <p>
+                    We speak of elastic goods when quantity demanded responds substantially to changes in price.
+                </p>
+            </div>
+        </div>                               
+        <div class="flip-card" onclick="flip(2)">
+            <div class="front-card">
+                <img src="img/Elast_2.jpg">
+                <p class="orange-text">
+                    Inelastic goods
+                </p>
+            </div >
+            <div class="back-card">
+                <p>
+                    We speak of inelastic goods when quantity demanded responds only slightly to changes in price.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="flexy-ie" class="flexy">
+        <div class="ie-card" onclick="flipIE(1)">
+            <div class="ie-front-card">
+                <img src="img/Elast_1.jpg">
+                <p class="orange-text">
+                    Elastic goods
+                </p>
+            </div>
+            <div class="ie-back-card">
+                <p>
+                    We speak of elastic goods when quantity demanded responds substantially to changes in price.
+                </p>              
+            </div>
+        </div>
+        <div class="ie-card" onclick="flipIE(2)">
+            <div class="ie-front-card">
+                <img src="img/Elast_2.jpg">
+                <p class="orange-text">
+                    Inelastic goods
+                </p>
+            </div>
+            <div class="ie-back-card">
+                <p>
+                    We speak of inelastic goods when quantity demanded responds only slightly to changes in price.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+    // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+
+    // Chrome 1+
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+    if (isIE) {
+        document.getElementById('flexy-not-ie').style.display = "none";
+    } else {
+        document.getElementById('flexy-ie').style.display = "none";
+    }
+    function flip(e) {
+        e--
+        $(".flip-card").eq(e).toggleClass('turn');
+    }
+    function flipIE(e) {
+        e--
+        $(".ie-card").eq(e).toggleClass('show');
+    }
+</script>
+

@@ -1,0 +1,50 @@
+<div id="page-container">
+    <div class="container">
+        <h3>Question to analyze</h3>
+        <div class="cita">
+            <p>
+                <img src="img/icons/help-circle.svg">
+            </p>
+            <p>Is an entrepreneur interested in raising the price of the product he sells (if he can)?</p>
+        </div>
+        <p style="text-align: center;">
+            <button onclick="toggleJumbo()">See answer</button>
+        </p>
+    </div>
+</div>
+<div class="modal jumbo" id="jumbo-modal">
+    <div class="modal-body">
+        <div class="row">
+            <div class="w50">
+                <p>It depends, <b>not always is the best option</b>.</p>
+                <p>Increasing the price, as we already know, has two effects on total income:</p>
+                <ul>
+                    <li>On the one hand, it increases because the units are sold at a higher price, giving a higher final income with the same number of units sold.</li>
+                    <li>But on the other hand, it decreases because fewer units will be sold due to its higher price.</li>
+                </ul>
+                <p>Therefore, it is essential that, before making a decision on a price change, the entrepreneur knows as best as possible how consumers will react to this price change. That is, if the quantity demanded of the good is going to be reduced much or just a little.</p>
+                <p>To know how big the change can be, we use the concept of <b>elasticity</b>, which measures the change that a variable undergoes when another is modified (logically, affecting the first one).</p>
+            </div>
+            <div class="w50">
+                <img src="img/Elast_5.jpg" alt="">
+            </div>
+        </div>           
+    </div>
+</div>
+<div class="modal-header-fixed" id="modal-header-fixed">
+    <img src="img/icons/x.svg" alt="" onclick="toggleJumbo()">
+</div>
+<script>
+
+    function toggleJumbo() {
+        $("#jumbo-modal").toggleClass("show");
+        $("#overlay").toggleClass("show");
+        $("#modal-header-fixed").toggleClass("show");
+        setTimeout(function(){
+            $("#jumbo-modal").toggleClass("visible");
+            $("#overlay").toggleClass("visible");
+            $("#modal-header-fixed").toggleClass("visible");
+        }, 20);
+    }
+
+</script>

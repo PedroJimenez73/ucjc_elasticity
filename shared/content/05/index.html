@@ -1,0 +1,61 @@
+<div id="page-container">
+    <div class="container">
+        <h1>Applying the Supply and-Demand Model</h1>
+        <h3>Let’s get started</h3>
+        <div class="row">
+            <div class="w50">
+                <div class="actividades">
+                    <p>Medicines are very likely to exhibit which type of elasticity?</p>
+                    <hr>
+                    <form>
+                        <label>
+                            <input type="radio" name="question" value="a">
+                            Elastic
+                        </label>
+                        <label>
+                            <input type="radio" name="question" value="b">
+                            Inelastic
+                        </label>
+                        <label>
+                            <input type="radio" name="question" value="c">
+                            Unit elastic
+                        </label>
+                        <div class="buttons">
+                            <button type="button" onclick="getAnswer()">Check it</button>
+                        </div>
+                    </form>
+                    <div class="feedback">
+                        <div class="feed">
+                            Incorrect. Medicines are not very sensitive to price change because they are necessary, so they are not an elastic good as clothing or electronics could be.                      
+                        </div>
+                        <div class="feed correct">
+                            Correct. Medicines are necessary and not very sensitive to price change, so they are not classified as inelastic.
+                        </div>
+                        <div class="feed">
+                            Incorrect. The unit elastic demand implies that the percentage change in quantity demanded is exactly the same as the percentage change in price.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w50">
+                <div style="padding: 1rem;">
+                    <img src="img/Elast_3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var inputs = document.querySelectorAll('input');
+    var feeds = document.querySelectorAll('.feed');
+    var correctAnswer = 'c';
+
+    function getAnswer() {
+        for(i = 0; i < inputs.length; i++) {
+            feeds[i].style.display = 'none';
+            if(inputs[i].checked) {
+                feeds[i].style.display = 'block';
+            }
+        }
+    }
+</script>
