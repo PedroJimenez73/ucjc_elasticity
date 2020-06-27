@@ -1,0 +1,83 @@
+<div id="page-container">
+    <div class="container" id="top">
+	    <h1>
+            Glossary
+        </h1>
+        <p class="instructions">Click on terms to show the information.</p>
+        <div class="glosario" >
+            <div class="lista_terminos">
+                <div id="menu-glosario" style="min-height: 425px;">
+                    
+                </div>
+            </div>
+            <div id="contenedores" class="contenedor_info"></div>
+        </div>
+        <div class="glosario-small">
+            <div id="mini-menu-glosario" class="lista_terminos_small" style="min-height: 300px;">
+            </div>
+            <div id="contenedores-mini">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var terminos = 
+    [
+        'Demand curve',
+        'Elasticity',
+        'Sales tax',
+        'Supply curve'
+    ];
+    var definiciones = 
+    [
+        'Graphical representation of the relationship between the price of a good or service and the quantity demanded for a given period of time. In a typical representation, the price will appear on the left vertical axis, the quantity demanded on the horizontal axis.',
+        'Measure of a variable\'s sensitivity to a change in another variable, most commonly this sensitivity is the change in price relative to changes in other factors. In business and economics, elasticity refers to the degree to which individuals, consumers or producers change their demand or the amount supplied in response to price or income changes. It is predominantly used to assess the change in consumer demand as a result of a change in a good or service\'s price.',
+        'Consumption tax imposed by the government on the sale of goods and services.',
+        'Graphic representation of the correlation between the cost of a good or service and the quantity supplied for a given period. In a typical illustration, the price will appear on the left vertical axis, while the quantity supplied will appear on the horizontal axis.'
+    ];
+    var menuGlosario = document.getElementById('menu-glosario');
+    var contenedores = document.getElementById('contenedores');
+    var minimenuGlosario = document.getElementById('mini-menu-glosario');
+    var contenedoresMini = document.getElementById('contenedores-mini');
+    var contenidomenuGlosario = '';
+    var contenidoCont = '';
+    var contenidoMinimenuGlosario = '';
+    var contenidoContMini = '';
+    for (i=0; i < terminos.length; i++){
+        contenidomenuGlosario += '<p onclick="glosario('+ i + ')">'+ terminos[i] + '</p>';
+        contenidoCont += '<div id="cont' + i + '"><p class="titulo_termino">' + terminos[i] + '</p><p class="info_termino">'+ definiciones[i] + '</p></div>';
+        contenidoMinimenuGlosario +=  '<a href="#cont' + (i+terminos.length) +'">' + terminos[i] + '</a>';
+        contenidoContMini +=  '<span id="cont' + (i+terminos.length) +'" style="display: block; margin-top: -100px; padding-bottom: 100px">&nbsp;</span><div class="glosario_termino"><p class="titulo_termino_small">' + terminos[i] + '<a href="#top" class="titulo_termino_arriba">back to index</a></p><p class="info_termino_small">' + definiciones[i] + '</p></div>';
+    }
+    menuGlosario.innerHTML = contenidomenuGlosario;
+    contenedores.innerHTML = contenidoCont;
+    minimenuGlosario.innerHTML = contenidoMinimenuGlosario;
+    contenedoresMini.innerHTML = contenidoContMini;
+    
+    $("a").on("click",function(){
+        if(this.hash !== ""){
+            var hash = this.hash;
+            $("html, body").animate({
+                scrollTop: $(hash).offset().top
+            }, 800);
+        }
+    });
+    
+    function glosario(j){
+        id2='#cont'+j;
+        $(".contenedor_info div").fadeOut(0);
+        $(id2).fadeIn(0);
+    }
+</script>
+<script>
+/* Smooth vertical */
+$("a").on("click",function(){
+    if(this.hash !== ""){
+        var hash = this.hash;
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
+    }
+});
+</script>

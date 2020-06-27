@@ -29,9 +29,9 @@ intra-SCO navigation.
 	</metadata>
   <organizations default="golf_sample_default_org">
 		<organization identifier="golf_sample_default_org" adlseq:objectivesGlobalToSystem="false">
-			<title>Criptomoneda</title>
+			<title>Elasticity</title>
 			<item identifier="item_1" identifierref="resource_1">
-				<title>Criptomoneda</title>
+				<title>Elasticity</title>
         <!-- Include some basic sequencing information that overrides the defaults-->
         <imsss:sequencing>
           <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>

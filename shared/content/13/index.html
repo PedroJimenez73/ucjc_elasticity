@@ -1,21 +1,91 @@
 <div id="page-container">
     <div class="container">
         <h2>
-            <span>3.2</span>
-            Demand elasticities over time
+            <span>2.1</span>
+            Horizontal and vertical demand curve
         </h2>
-        <div class="row">
-            <div class="w50">
-                <ul>
-                    <li class="fade-uno">Demand elasticities may be <b>different in the short-run and the long run</b>.</li>
-                    <li class="fade-dos">The difference depends on substitution and storage opportunities.</li>
-                    <li class="fade-tres">For most goods elasticities <b>tend to be larger in the long run</b>.</li>
-                    <li class="fade-cuatro"><b>For easily storable or durable goods, the reverse is true</b>.</li> 
-                </ul>
+        <h3>What happens when all these changes go to extremes?</h3>
+        <p>Which are the characteristics of a perfect elastic and inelastic demand?</p>
+        <div class="tab">
+            <div class="tabs">
+                <div class="check" onclick="toggleTab(1)">
+                    <p>Horizontal demand curve</p>
+                </div>
+                <div onclick="toggleTab(2)">
+                    <p>Vertical demand curve</p>
+                </div>
             </div>
-            <div class="w50">
-                <img style="padding: 1rem" src="img/Elast_13.jpg" alt="">
+            <div class="content-tabs">
+                <div class="show visible" style="z-index: 10;">
+                    <p>Along a horizontal demand curve, elasticity is infinite – <b>perfectly elastic demand</b>.</p>
+                    <ul>
+                        <li>People are willing to buy as much as firms sell at any price less than or equal  to p*.</li>
+                        <li>If the price increases even slightly above P*, demand falls to zero. </li>
+                        <li>A small increase in price causes an infinite drop in quantity demanded. </li>
+                    </ul>
+                </div>
+                <div class="show">
+                    <ul>
+                        <li>Along a vertical demand curve, elasticity is zero – perfectly inelastic demand.</li>
+                        <li>If the price goes up, the quantity demanded is unchanged.</li>
+                        <li>A demand curve is vertical for essential goods: goods that people feel they must have and will pay anything to get.</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <p>&nbsp;</p>
+        <img style="display: block; margin: 2rem auto;" src="img/Elast_9.jpg" alt="">
     </div>
 </div>
+<script>
+    var tab = document.querySelector('.tab');
+    var tabs = document.querySelectorAll('.tabs div');
+    var contents = document.querySelectorAll('.content-tabs .show');
+    var body = document.querySelector('body');
+
+    var maxHeightContent = 0;
+    var tabsHeigth = 0;
+
+    if(window.innerWidth > 440) {
+        for (i = 0; i < contents.length; i++) {
+            if(contents[i].offsetHeight > maxHeightContent) {
+                maxHeightContent = contents[i].offsetHeight;
+            }
+        }
+
+        tab.style.height = maxHeightContent + 40 + 'px';
+
+        for (j = 0; j < tabs.length; j++) {
+            tabs[j].style.height = (maxHeightContent + 40) / tabs.length + 'px';
+        }
+    } else {
+        for (i = 0; i < tabs.length; i++) {
+            maxHeightContent += tabs[i].offsetHeight;
+        }
+
+        tab.style.height = maxHeightContent + 'px';
+    }
+
+    function toggleTab(e) {
+        e--;
+        for (k = 0; k < tabs.length; k++) {
+            if (e !== k) {
+                tabs[k].classList.remove('check');
+                contents[k].classList.remove('visible');
+            } else {
+                tabs[k].classList.add('check');
+                contents[k].classList.add('visible');
+            }
+        }
+    }
+
+    function toggleJumbo() {
+        $("#jumbo-modal").toggleClass("show");
+        $("#overlay").toggleClass("show");
+        setTimeout(function(){
+            $("#jumbo-modal").toggleClass("visible");
+            $("#overlay").toggleClass("visible");
+        }, 20);
+    }
+
+</script>

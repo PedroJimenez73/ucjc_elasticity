@@ -1,79 +1,27 @@
 <div id="page-container">
     <div class="container">
-        <h2>
-            <span>3</span>
-            Demand elasticity and revenue
-        </h2>
+        <h1>
+            <span>2</span>
+            Elasticity along the demand curve
+        </h1>
         <div class="super-text">
             <p>
-                Any shock that changes the equilibrium price to change will affect the industry’s revenue. And accordingly, <b>the elasticity of demand will determine the effect that a price rise (or fall) can have on the total income</b>.
+                The elasticity of demand varies along most demand curves.
             </p>
         </div>
-        <p>Whether the revenue rises or falls when the equilibrium price increases depends on the elasticity of demand.</p>
-        <ul>
-            <li>With elastic demand, a higher price reduces revenue.</li>
-            <li>With inelastic demand, a higher price increases revenue.</li>
-        </ul>
-        <p>Try to guess and see what happens...<b></b></p>
-        <p style="text-align: center;">
-            <button onclick="toggleJumbo2()">In the case of relatively elastic demand</button>
+        <p>
+            The elasticity of demand is different at every point along a downward-sloping linear demand curve. The elasticities are constant along horizontal and vertical linear demand curves. 
         </p>
-        <p style="text-align: center;">
-            <button onclick="toggleJumbo3()">In the case of perfectly inelastic demand</button>
-        </p>
-    </div>
-</div>
-<div class="modal jumbo" id="jumbo-modal-2">
-    <div class="modal-body">
-        <p>A rise in prices causes a greater percentage drop in the quantity consumed, so that the final total income (A + C) is less than before the change in price (A + B). <b>Capital loss</b>.</p>   
         <div class="charts">
             <div class="chart">
-                <img src="img/Elast_10.jpg" alt="">
+                <img src="img/Elast_8_a.png" alt="">
+                <img src="img/Elast_8_b.png" alt="">
+                <img src="img/Elast_8_c.png" alt="">
+                <img src="img/Elast_8_d.png" alt="">
+                <img src="img/Elast_8_e.png" alt="">
+                <img src="img/Elast_8_f.png" alt="">
             </div>
         </div>
     </div>
 </div>
-<div class="modal-header-fixed" id="modal-header-fixed-2">
-    <img src="img/icons/x.svg" alt="" onclick="toggleJumbo2()">
-</div>
-<div class="modal jumbo" id="jumbo-modal-3">
-    <div class="modal-body">
-        <p>However, in the case of perfectly inelastic demands, the rise in the price does not cause falls in the quantity demanded and the final income (A + C) is greater than the initial (A). <b>Capital increase</b>.</p>
-        <div class="charts">
-            <div class="chart">
-                <img src="img/Elast_11.jpg" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal-header-fixed" id="modal-header-fixed-3">
-    <img src="img/icons/x.svg" alt="" onclick="toggleJumbo3()">
-</div>
-<script>
-
-    function toggleJumbo2() {
-        $("#jumbo-modal-2").toggleClass("show");
-        $("#overlay").toggleClass("show");
-        $("#modal-header-fixed-2").toggleClass("show");
-        //$('body').toggleClass("lock-scroll");
-        setTimeout(function(){
-            $("#jumbo-modal-2").toggleClass("visible");
-            $("#overlay").toggleClass("visible");
-            $("#modal-header-fixed-2").toggleClass("visible");
-        }, 20);
-    }
-
-    function toggleJumbo3() {
-        $("#jumbo-modal-3").toggleClass("show");
-        $("#overlay").toggleClass("show");
-        $("#modal-header-fixed-3").toggleClass("show");
-        //$('body').toggleClass("lock-scroll");
-        setTimeout(function(){
-            $("#jumbo-modal-3").toggleClass("visible");
-            $("#overlay").toggleClass("visible");
-            $("#modal-header-fixed-3").toggleClass("visible");
-        }, 20);
-    }
-
-</script>
 

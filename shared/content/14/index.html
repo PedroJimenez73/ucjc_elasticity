@@ -1,126 +1,85 @@
 <div id="page-container">
     <div class="container">
-        <h2>
-            <span>3.3</span>
-            Income elasticity
-        </h2>
-        <p>&nbsp;</p>
-        <img src="img/f6.png" alt="">
-        <section class="accordion">
-            <article onclick="toggleAccordion(1)">
-                <div class="accordion-title">
-                    <span>Example</span>
-                    <img class="plus" src="img/icons/plus.svg" alt="">
-                    <img class="minus" src="img/icons/minus.svg" alt="">
-                </div>
-                <div class="accordion-content">
-                    <p>If a 1% increase in income results in a 3% increase in quantity demanded, the <b>income elasticity of demand </b> is:</p>
-                    <img src="img/f7.png" alt="">
-                </div>
-            </article>
-        </section>
-        <h3>Summary</h3>
-        <img style="display: block; margin: 1rem auto" src="img/Elast_16.jpg" alt="">
-        <p class="instructions">Click over images to expand info.</p>
-        <div id="flexy-not-ie" class="flexy" >
-            <div class="flip-card super" onclick="flip(1)">
-                <div class="front-card">
-                    <img src="img/Elast_14.jpg">
-                    <p class="orange-text">
-                        If ε >0 Normal goods
-                    </p>
-                </div>
-                <div class="back-card" style="background-color: white; border: 1px solid lightgray">
-                    <img src="img/f8.png" alt="">
-                    <p>
-                        A <b>normal good</b> sees an <b>increase in demand when incomes increase</b>. Normal goods are also called <b>necessary goods</b>. An example is organic bananas. If a consumer's income is low, he may buy regular bananas. But if he has a few extra dollars to spend each month, he may choose to buy organic bananas. Other examples include clothing, water, and beer and alcohol.
-                    </p>
-                    <p>
-                        <b>Luxury goods</b>, on the other hand, are not deemed a necessity to live. These goods are highly-desired and can be purchased when a consumer's income rises. Luxury items include cleaning and cooking services, handbags and luggage, certain automobiles, and haute couture.
-                    </p>
-                </div>
-            </div>                               
-            <div class="flip-card super" onclick="flip(2)">
-                <div class="front-card">
-                    <img src="img/Elast_15.jpg">
-                    <p class="orange-text">
-                        If ε &lt; 0 Inferior goods
-                    </p>
-                </div >
-                <div class="back-card" style="background-color: white; border: 1px solid lightgray">
-                    <p><b>Inferior goods</b>—which are the opposite of normal goods—are anything a consumer would demand less of if they had a higher level of real income. They may also be associated with those who typically fall into a lower socio-economic class.</p>
-                    <p>It's important to note that the term inferior good <b>refers to its affordability</b>, rather than its quality, even though some inferior goods may be of lower quality.</p>
-                    <p>In economics, the demand for inferior goods decreases as income increases or the economy improves. When this happens, consumers will be more willing to spend on more costly substitutes.</p>
-                </div>
-            </div>
+        <h1>
+            <span>3</span>
+            Demand elasticity and revenue
+        </h1>
+        <div class="super-text">
+            <p>
+                Any shock that changes the equilibrium price to change will affect the industry’s revenue. And accordingly, <b>the elasticity of demand will determine the effect that a price rise (or fall) can have on the total income</b>.
+            </p>
         </div>
-        <div id="flexy-ie" class="flexy">
-            <div class="ie-card super" onclick="flipIE(1)">
-                <div class="ie-front-card">
-                    <img src="img/Elast_14.jpg">
-                    <p class="orange-text">
-                        If ε >0 Normal goods
-                    </p>
-                </div>
-                <div class="ie-back-card" style="background-color: white; border: 1px solid lightgray">
-                    <img src="img/f8.png" alt="">
-                    <p>
-                        A <b>normal good</b> sees an <b>increase in demand when incomes increase</b>. Normal goods are also called <b>necessary goods</b>. An example is organic bananas. If a consumer's income is low, he may buy regular bananas. But if he has a few extra dollars to spend each month, he may choose to buy organic bananas. Other examples include clothing, water, and beer and alcohol.
-                    </p>
-                    <p>
-                        <b>Luxury goods</b>, on the other hand, are not deemed a necessity to live. These goods are highly-desired and can be purchased when a consumer's income rises. Luxury items include cleaning and cooking services, handbags and luggage, certain automobiles, and haute couture.
-                    </p>             
-                </div>
-            </div>
-            <div class="ie-card super" onclick="flipIE(2)">
-                <div class="ie-front-card">
-                    <img src="img/Elast_2.jpg">
-                    <p class="orange-text">
-                        Inelastic goods
-                    </p>
-                </div>
-                <div class="ie-back-card" style="background-color: white; border: 1px solid lightgray">
-                    <p>
-                        We speak of inelastic goods when quantity demanded responds only slightly to changes in price.
-                    </p>
-                </div>
+        <p>Whether the revenue rises or falls when the equilibrium price increases depends on the elasticity of demand.</p>
+        <ul>
+            <li>With elastic demand, a higher price reduces revenue.</li>
+            <li>With inelastic demand, a higher price increases revenue.</li>
+        </ul>
+        <p>Try to guess and see what happens...<b></b></p>
+        <p style="text-align: center;">
+            <button onclick="toggleJumbo2()">In the case of relatively elastic demand</button>
+        </p>
+        <p style="text-align: center;">
+            <button onclick="toggleJumbo3()">In the case of perfectly inelastic demand</button>
+        </p>
+    </div>
+</div>
+<div class="modal jumbo" id="jumbo-modal-2">
+    <div class="modal-body">
+        <p>A rise in prices causes a greater percentage drop in the quantity consumed, so that the final total income (A + C) is less than before the change in price (A + B). <b>Capital loss</b>.</p>   
+        <div class="charts">
+            <div class="chart">
+                <img src="img/Elast_10.jpg" alt="">
             </div>
         </div>
     </div>
 </div>
+<div class="modal-header-fixed" id="modal-header-fixed-2">
+    <img src="img/icons/x.svg" alt="" onclick="toggleJumbo2()">
+</div>
+<div class="modal jumbo" id="jumbo-modal-3">
+    <div class="modal-body">
+        <p>However, in the case of perfectly inelastic demands, the rise in the price does not cause falls in the quantity demanded and the final income (A + C) is greater than the initial (A). <b>Capital increase</b>.</p>
+        <div class="charts">
+            <div class="chart">
+                <img src="img/Elast_11.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-header-fixed" id="modal-header-fixed-3">
+    <img src="img/icons/x.svg" alt="" onclick="toggleJumbo3()">
+</div>
 <script>
-    // Opera 8.0+
-    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
-    // Firefox 1.0+
-    var isFirefox = typeof InstallTrigger !== 'undefined';
-
-    // Safari 3.0+ "[object HTMLElementConstructor]" 
-    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
-
-    // Internet Explorer 6-11
-    var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
-    // Edge 20+
-    var isEdge = !isIE && !!window.StyleMedia;
-
-    // Chrome 1+
-    var isChrome = !!window.chrome && !!window.chrome.webstore;
-
-    // Blink engine detection
-    var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-    if (isIE) {
-        document.getElementById('flexy-not-ie').style.display = "none";
-    } else {
-        document.getElementById('flexy-ie').style.display = "none";
+    function toggleJumbo2() {
+        $("#jumbo-modal-2").toggleClass("show");
+        $("#overlay").toggleClass("show");
+        $("#modal-header-fixed-2").toggleClass("show");
+        //$('body').toggleClass("lock-scroll");
+        setTimeout(function(){
+            $("#jumbo-modal-2").toggleClass("visible");
+            $("#overlay").toggleClass("visible");
+            $("#modal-header-fixed-2").toggleClass("visible");
+            $("html, body").animate({
+                scrollTop: 0
+            }, 200);
+        }, 20);
     }
-    function flip(e) {
-        e--
-        $(".flip-card").eq(e).toggleClass('turn');
+
+    function toggleJumbo3() {
+        $("#jumbo-modal-3").toggleClass("show");
+        $("#overlay").toggleClass("show");
+        $("#modal-header-fixed-3").toggleClass("show");
+        //$('body').toggleClass("lock-scroll");
+        setTimeout(function(){
+            $("#jumbo-modal-3").toggleClass("visible");
+            $("#overlay").toggleClass("visible");
+            $("#modal-header-fixed-3").toggleClass("visible");
+            $("html, body").animate({
+                scrollTop: 0
+            }, 200);
+        }, 20);
     }
-    function flipIE(e) {
-        e--
-        $(".ie-card").eq(e).toggleClass('show');
-    }
+
 </script>
+

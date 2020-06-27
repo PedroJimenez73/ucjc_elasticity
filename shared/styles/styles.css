@@ -588,8 +588,7 @@ p.orange-text {
     width: 500px;
     height: 700px;
   }
-}
-@media (max-width: 540px) {
+
   .ie-card {
     position: relative;
     margin: 20px;
@@ -635,6 +634,11 @@ p.orange-text {
 video {
   width: 100%;
   max-width: 720px;
+  display: block;
+  margin: 2rem auto;
+}
+
+iframe {
   display: block;
   margin: 2rem auto;
 }
@@ -1898,7 +1902,7 @@ img {
 }
 img.map {
   display: block;
-  max-width: 840px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
